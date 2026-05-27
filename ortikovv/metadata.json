@@ -1,0 +1,6 @@
+{
+  "name": "Ortikovv",
+  "description": "Portfolio and conceptual design laboratory of Sherbek Ortiqov, exploring the intersection of technology and bold aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

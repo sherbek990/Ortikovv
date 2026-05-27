@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-obsidian: #050505;
+  --color-acid: #D1FF00;
+  --color-industrial: #222222;
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-white font-sans overflow-x-hidden;
+    background-image: 
+      linear-gradient(to right, #111 1px, transparent 1px),
+      linear-gradient(to bottom, #111 1px, transparent 1px);
+    background-size: 100px 100px;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-black tracking-tighter uppercase;
+  }
+}
+
+.brutalist-border {
+  @apply border border-industrial;
+}
+
+.massive-bg-text {
+  @apply fixed -bottom-10 -left-10 text-[320px] font-black leading-[0.75] tracking-[-15px] text-white/[0.03] pointer-events-none z-0 whitespace-nowrap uppercase select-none;
+}
+
+.pill {
+  @apply bg-[#111] border border-[#333] px-3 py-1 rounded-full text-[10px] text-[#888] font-bold uppercase tracking-widest;
+}
+
+.stat-row {
+  @apply py-6 border-b border-industrial;
+}
+
+.stat-label {
+  @apply text-[10px] uppercase tracking-[2px] text-[#666] mb-2 block;
+}
+
+.stat-value {
+  @apply text-2xl font-bold tracking-tighter leading-none;
+}
+
+::selection {
+  @apply bg-acid text-black;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-obsidian;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-industrial rounded-none hover:bg-neutral-700 transition-colors;
+}
+
